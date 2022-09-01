@@ -1,5 +1,5 @@
 package interfaces;
 
-public interface Camera {
+public interface ICamera {
     void camera();
 }

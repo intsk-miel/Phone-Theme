@@ -1,14 +1,16 @@
 package theme;
 
-import interfaces.Voice;
+import interfaces.IDisplay;
+import interfaces.IVoice;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.Objects;
 
-public class Samsung extends Phone implements Voice {
+public class Samsung extends Phone implements IVoice, IDisplay {
     private  static final Logger LOGGER = LogManager.getLogger(Samsung.class);
     private String colour;
+
 
     public Samsung(String model, int price, double weight, String colour, int phoneNumber) {
         super(model, price, weight, phoneNumber);
@@ -44,6 +46,26 @@ public class Samsung extends Phone implements Voice {
     @Override
     public void voice() {
         LOGGER.info("turn up the voice!");
+    }
+
+    @Override
+    public void retinaDisplay() {
+        LOGGER.info("Only Apple uses retina display");
+    }
+
+    @Override
+    public void hapticTouchscreen() {
+        LOGGER.info("One UI 4 uses haptic display");
+    }
+
+    @Override
+    public void amoledDisplay() {
+        LOGGER.info("Samsung Galaxy Z Fold 4 and Z Flip 4 uses AMOLED display");
+    }
+
+    @Override
+    public void thinFilmTransistor() {
+        LOGGER.info("Samsung Galaxy A23 uses TTF display");
     }
 }
 

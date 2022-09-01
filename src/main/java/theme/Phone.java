@@ -7,6 +7,7 @@ import java.util.*;
 
 public abstract class Phone{
     private  static final Logger LOGGER = LogManager.getLogger(Samsung.class);
+    private HashMap<String, Integer>[] messages;
     private String model;
     private int price;
     private double weight;
@@ -50,7 +51,6 @@ public abstract class Phone{
     }
 
 
-    HashMap<String, Integer>[] messages;
     List<Map<String , Integer>> myMap = new ArrayList<Map<String, Integer>>();
     public void sendMessage(int phoneNumber, String message){
         Map<String, Integer> myMap1 = new HashMap<String, Integer>();

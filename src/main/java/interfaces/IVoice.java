@@ -1,5 +1,5 @@
 package interfaces;
 
-public interface Voice {
+public interface IVoice {
     void voice();
 }

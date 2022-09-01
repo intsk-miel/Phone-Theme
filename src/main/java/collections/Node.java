@@ -29,39 +29,3 @@ public class Node <T>{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-//
-//public class Node <N> {
-//    N next;
-//    N data;
-//
-//    Node(N data) {
-//        this.data = data;
-//    }
-//
-//    public N getValue() {
-//        return data;
-//    }
-//    public void setValue(N value) {
-//        this.data = value;
-//    }
-//
-//    public N getNext() {
-//        return next;
-//    }
-//    public void setNext(N next) {
-//        this.next = next;
-//    }
-//}
-

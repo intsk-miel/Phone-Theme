@@ -1,19 +1,20 @@
 package theme;
 
-import interfaces.CallType;
-import interfaces.Camera;
-import interfaces.Voice;
+import interfaces.IDisplay;
+import interfaces.ICallType;
+import interfaces.ICamera;
+import interfaces.IVoice;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import java.util.Objects;
 
-public class Xiaomi extends Phone implements CallType, Voice, Camera {
+public class Xiaomi extends Phone implements ICallType, IVoice, ICamera {
     private  static final Logger LOGGER = LogManager.getLogger(Xiaomi.class);
-    private static final int phoneNumber = 3432434;
+    private static final int PHONENUMBER = 3432434;
     private String structure;
 
     public Xiaomi(String model, int price, double weight, String structure) {
-        super(model, price, weight, phoneNumber);
+        super(model, price, weight, PHONENUMBER);
         this.structure = structure;
     }
 
@@ -50,7 +51,7 @@ public class Xiaomi extends Phone implements CallType, Voice, Camera {
     }
 
     @Override
-    public void type() {
+    public void writeType() {
         LOGGER.info("He is going to call you");
     }
 
@@ -63,6 +64,7 @@ public class Xiaomi extends Phone implements CallType, Voice, Camera {
     public void voice() {
         LOGGER.info("Start playing some song");
     }
+
 }
 
 

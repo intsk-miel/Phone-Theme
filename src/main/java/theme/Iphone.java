@@ -1,24 +1,26 @@
 package theme;
 
-import interfaces.Camera;
+import interfaces.ICamera;
+import interfaces.IFingerPrint;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.Objects;
 
-public class Iphone extends Phone implements Camera {
+public class Iphone extends Phone implements ICamera, IFingerPrint {
     private  static final Logger LOGGER = LogManager.getLogger(Samsung.class);
-    private String battery;
-    public Iphone(String model, int price, double weight, String battery, int phoneNumber) {
+    private double size;
+    public Iphone(String model, int price, double weight, double size , int phoneNumber) {
         super(model, price, weight, phoneNumber);
-        this.battery = battery;
+        this.size = size;
     }
 
-    public String getBattery() {
-        return battery;
+    public double getSize() {
+        return size;
     }
-    public void setBattery(String battery) {
-        this.battery = battery;
+
+    public void setSize(double size) {
+        this.size = size;
     }
 
     @Override
@@ -27,22 +29,38 @@ public class Iphone extends Phone implements Camera {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         Iphone i = (Iphone) o;
-        return Objects.equals(battery, i.battery);
+        return Objects.equals(size, i.size);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), battery);
+        return Objects.hash(super.hashCode(), size);
     }
 
     @Override
     public String toString() {
-        return super.getModel() + " " + super.getWeight() +" "+ battery;
+        return super.getModel() + " " + super.getWeight() +" "+ size;
     }
 
     @Override
     public void camera() {
         LOGGER.info("It has the best camera!");
+    }
+
+
+    @Override
+    public void ultrasonic() {
+        LOGGER.info("Iphone is planning to use that type of fingerprint");
+    }
+
+    @Override
+    public void capacitive() {
+        LOGGER.info("Iphone has advanced capacitive touch ");
+    }
+
+    @Override
+    public void optical() {
+        LOGGER.info("Iphone 13 could have gotten optical fingerprint");
     }
 }
 
