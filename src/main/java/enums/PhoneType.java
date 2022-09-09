@@ -1,4 +1,4 @@
-package Enums;
+package enums;
 
 public enum PhoneType{
     SAMSUNG("Samsung"), IPHONE("Iphone"), NOKIA("Nokia"), HONOR("Honor");

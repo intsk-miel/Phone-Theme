@@ -1,4 +1,4 @@
-package Enums;
+package enums;
 
 public enum PhoneBattery {
     WORST("Lenovo Moto Z-Droid"), MEDIUM("The Samsung Galaxy S6 Active"), BEST("The Samsung Galaxy J7");

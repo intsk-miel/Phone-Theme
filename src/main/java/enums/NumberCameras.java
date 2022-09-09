@@ -1,4 +1,4 @@
-package Enums;
+package enums;
 
 public enum NumberCameras {
     FEW(2), SEVERAL(4), LOT(7);

@@ -1,4 +1,4 @@
-package Enums;
+package enums;
 
 public enum PhoneProperties {
     FIRSTPHONE(PhoneType.SAMSUNG, PhoneBattery.MEDIUM, NumberCameras.FEW.getCameras(), NumberMemory.MEDIUM.getMemory()),
