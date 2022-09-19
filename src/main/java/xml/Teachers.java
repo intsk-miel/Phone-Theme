@@ -5,10 +5,10 @@ import java.util.ArrayList;
 
 
 @XmlRootElement
-@XmlType(name = " teachers ")
+@XmlType(name="teachers")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Teachers {
-    @XmlElement(name ="teacher")
+    @XmlElement(name="teacher")
 
     private ArrayList<Teacher> teacherList = new ArrayList<Teacher>();
     public Teachers() {}
