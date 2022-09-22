@@ -5,7 +5,6 @@ import java.util.Date;
 
     @XmlRootElement
     @XmlType(name = "teacher")
-//    propOrder = {"firstName", "lastName", "dateBirth", "phoneNumber", "city", "subject", "email"})
     @XmlAccessorType(XmlAccessType.FIELD)
     public class Teacher {
         @XmlAttribute(name = "Id", required = true)

@@ -20,7 +20,7 @@ public class DOM {
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException {
         DocumentBuilderFactory buildFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = buildFactory.newDocumentBuilder();
-        Document doc = builder.parse(new File("src\\main\\resources\\xml files\\teachers.xml"));
+        Document doc = builder.parse(new File("src\\main\\resources\\xml files\\TeachersJaxb.xml"));
         NodeList teacherList = doc.getElementsByTagName("teacher");
         for(int i = 0; i < teacherList.getLength(); i++){
             Node t = teacherList.item(i);

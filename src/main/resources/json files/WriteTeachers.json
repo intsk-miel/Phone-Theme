@@ -1,0 +1,25 @@
+[ {
+  "firstName" : "ia",
+  "lastName" : "intskirvei",
+  "dateBirth" : "04/01/1970",
+  "phoneNumber" : 93758327,
+  "email" : "intsk@gmail.com"
+}, {
+  "firstName" : "lizi",
+  "lastName" : "sharadze",
+  "dateBirth" : "04/01/1970",
+  "phoneNumber" : 19274536,
+  "email" : "lizshr@gmail.com"
+}, {
+  "firstName" : "nia",
+  "lastName" : "goguadze",
+  "dateBirth" : "11/01/1970",
+  "phoneNumber" : 97264738,
+  "email" : "niagog@gmail.com"
+}, {
+  "firstName" : "luka",
+  "lastName" : "cinaridze",
+  "dateBirth" : "08/01/1970",
+  "phoneNumber" : 27001235,
+  "email" : "lukci@gmail.com"
+} ]
