@@ -4,44 +4,45 @@ import javax.xml.bind.annotation.*;
 import java.util.Date;
 
     @XmlRootElement
-    @XmlType(name = "teacher", propOrder = {"first_name", "last_name", "Date_Of_Birth", "phone_number", "city", "subject", "email"})
+    @XmlType(name = "teacher")
+//    propOrder = {"firstName", "lastName", "dateBirth", "phoneNumber", "city", "subject", "email"})
     @XmlAccessorType(XmlAccessType.FIELD)
     public class Teacher {
-        @XmlAttribute(required = true)
+        @XmlAttribute(name = "Id", required = true)
         private long id;
 
-        @XmlElement(required = true)
-        private String first_name;
+        @XmlElement(name = "Name", required = true)
+        private String firstName;
 
-        @XmlElement(required = true)
-        private String last_name;
+        @XmlElement(name = "LastName", required = true)
+        private String lastName;
 
-        @XmlElement(required = true)
-        private Date Date_Of_Birth;
+        @XmlElement(name = "DateOfBirth", required = true)
+        private Date dateBirth;
 
-        @XmlElement(required = true)
-        private int phone_number;
+        @XmlElement(name = "PhoneNumber", required = true)
+        private int phoneNumber;
 
-        @XmlElement(required = true)
+        @XmlElement(name = "City", required = true)
         private String city;
 
-        @XmlElement(required = true)
+        @XmlElement(name = "Subject", required = true)
         private String subject;
 
-        @XmlElement(required = true)
+        @XmlElement(name = "Email", required = true)
         private String email;
 
 
         public Teacher() {
         }
 
-        public Teacher(long id, String first_name, String last_name, Date Date_Of_Birth, String city, int phone_number, String subject, String email) {
+        public Teacher(long id, String firstName, String lastName, Date dateBirth, String city, int phoneNumber, String subject, String email) {
             this.id = id;
-            this.first_name = first_name;
-            this.last_name = last_name;
-            this.Date_Of_Birth = Date_Of_Birth;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.dateBirth = dateBirth;
             this.city = city;
-            this.phone_number = phone_number;
+            this.phoneNumber = phoneNumber;
             this.subject = subject;
             this.email = email;
         }
@@ -54,36 +55,36 @@ import java.util.Date;
             this.id = id;
         }
 
-        public String getFirst_name() {
-            return first_name;
+        public String getFirstName() {
+            return firstName;
         }
 
-        public void setFirst_name(String first_name) {
-            this.first_name = first_name;
+        public void setFirstName(String firstName) {
+            this.firstName = firstName;
         }
 
-        public String getLast_name() {
-            return last_name;
+        public String getLastName() {
+            return lastName;
         }
 
-        public void setLast_name(String last_name) {
-            this.last_name = last_name;
+        public void setLastName(String lastName) {
+            this.lastName = lastName;
         }
 
-        public Date getDate_Of_Birth() {
-            return Date_Of_Birth;
+        public Date getDateBirth() {
+            return dateBirth;
         }
 
-        public void setDate_Of_Birth(Date date_Of_Birth) {
-            Date_Of_Birth = date_Of_Birth;
+        public void setDateBirth(Date dateBirth) {
+            this.dateBirth = dateBirth;
         }
 
-        public int getPhone_number() {
-            return phone_number;
+        public int getPhoneNumber() {
+            return phoneNumber;
         }
 
-        public void setPhone_number(int phone_number) {
-            this.phone_number = phone_number;
+        public void setPhoneNumber(int phoneNumber) {
+            this.phoneNumber = phoneNumber;
         }
 
         public String getCity() {
@@ -114,10 +115,10 @@ import java.util.Date;
         public String toString() {
             return "Teacher {" + "\n" +
                     "id = " + id + "\n" +
-                    "name = " + first_name + "\n" +
-                    "lastname = " + last_name + "\n" +
-                    "date of birth = " + Date_Of_Birth + "\n" +
-                    "phone number = " + phone_number + "\n" +
+                    "name = " + firstName + "\n" +
+                    "lastname = " + lastName + "\n" +
+                    "date of birth = " + dateBirth + "\n" +
+                    "phone number = " + phoneNumber + "\n" +
                     "city = " + city + "\n" +
                     "subject = " + subject + "\n" +
                     "email = " + email + "\n" +
