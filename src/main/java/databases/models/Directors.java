@@ -1,34 +1,34 @@
-package json;
+package databases.models;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.Date;
 
-public class Teachers {
-    @JsonProperty("firstName")
+public class Directors {
+    private Long id;
     private String firstName;
-
-    @JsonProperty("lastName")
     private String lastName;
-
-    @JsonProperty("dateBirth")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern="dd/MM/yyyy")
-    private Date dateBirth;
-
-    @JsonProperty("phoneNumber")
+    private Date dateOfBirth;
     private int phoneNumber;
-
-    @JsonProperty("email")
+    private String city;
     private String email;
 
-    public Teachers(String firstName, String lastName, Date dateBirth, int phoneNumber, String email){
+    public Directors(){}
+    public Directors(Long id, String firstName, String lastName, Date dateOfBirth, int phoneNumber, String city, String email) {
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.dateBirth = dateBirth;
+        this.dateOfBirth = dateOfBirth;
         this.phoneNumber = phoneNumber;
+        this.city = city;
         this.email = email;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -46,12 +46,12 @@ public class Teachers {
         this.lastName = lastName;
     }
 
-    public Date getDateBirth() {
-        return dateBirth;
+    public Date getDateOfBirth() {
+        return dateOfBirth;
     }
 
-    public void setDateBirth(Date dateBirth) {
-        this.dateBirth = dateBirth;
+    public void setDateOfBirth(Date dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 
     public int getPhoneNumber() {
@@ -60,6 +60,14 @@ public class Teachers {
 
     public void setPhoneNumber(int phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 
     public String getEmail() {
@@ -72,11 +80,14 @@ public class Teachers {
 
     @Override
     public String toString() {
-        return "Teachers{" +"\n" +
-                "firstname = " + firstName + "\n" +
+        return "Directors {" + "\n" +
+                "id = " + id + "\n" +
+                "name = " + firstName + "\n" +
                 "lastname = " + lastName + "\n" +
-                "date of birth = " + dateBirth + "\n" +
+                "date of birth = " + dateOfBirth + "\n" +
                 "phone number = " + phoneNumber + "\n" +
-                "email = " + email + "\n" + '}';
+                "city = " + city + "\n" +
+                "email = " + email + "\n" +
+                '}' + "\n";
     }
 }
