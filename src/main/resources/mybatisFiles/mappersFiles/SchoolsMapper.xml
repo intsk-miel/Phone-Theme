@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
+        'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
+
+<mapper namespace="databases.services.mybatis.mappers.ISchoolsMapper">
+
+    <select id="getById" parameterType="Long" resultMap="SchoolsResult">
+        SELECT * FROM Schools WHERE id =#{id}
+    </select>
+
+    <resultMap id="SchoolsResult" type="Schools">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="city" column="city"/>
+        <result property="street" column="street"/>
+        <result property="webAddress" column="web_address"/>
+        <result property="email" column="email"/>
+        <result property="directorId" column="Director_Id"/>
+    </resultMap>
+
+    <select id="getAllSchools" resultMap="SchoolsResult">
+        SELECT * FROM Schools
+    </select>
+
+    <insert id="insert" parameterType="Schools" useGeneratedKeys="true"
+            keyProperty="id" >
+        INSERT INTO Schools(name,city,street,web_address,email,Director_Id)
+        VALUES (#{name},#{city},#{street},#{webAddress},#{email},#{directorId})
+    </insert>
+
+    <update id="update" parameterType="Schools">
+        UPDATE Schools
+        SET
+        name = #{name},
+        city = #{city},
+        street = #{street},
+        web_address = #{webAddress},
+        email = #{email},
+        Director_Id = #{directorId}
+        WHERE id = #{id}
+    </update>
+
+    <delete id="delete" parameterType="Long">
+        DELETE FROM Schools WHERE id= #{id}
+    </delete>
+
+</mapper>

@@ -1,4 +1,4 @@
-package files;
+package streaming.files;
 
 import org.apache.commons.io.FileUtils;
 

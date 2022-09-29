@@ -1,32 +1,31 @@
 package databases;
 
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import databases.services.mybatis.batiservices.*;
 import databases.models.*;
+import databases.services.mybatis.batiservices.*;
 
 public class MainMyBatis {
     private static final Logger LOGGER = LogManager.getLogger(MainMyBatis.class);
     public static void main(String[] args) {
-       TeachersServices teachersServices = new TeachersServices();
-        for (Teachers t:teachersService.getAllTeachers()) {
-            LOGGER.info(t);
+        ClassesService classesService = new ClassesService();
+        for (Classes c:classesService.getAllClasses()) {
+            LOGGER.info(c);                                         //selectAll
         }
 
 
-        Teachers teachers = new Teachers();
-        teachersService.insert(teachers);
+//        Classes classes = new Classes();
+//        classesService.insert(classes);                //insert
 
 
-        Teachers teachers = teachersService.getById(1L);
-        LOGGER.info(teachers);
+//        Teachers teachers = teachersService.getById(1L);
+//        LOGGER.info(teachers);                                  //getById
 
 
-        Teachers teachers = new Teachers();
-        teachersService.update(teachers,3L);
+//        Teachers teachers = new Teachers();
+//        teachersService.update(teachers,3L);    //update
 
 
-        teachersServices.delete(4L);
+//        teachersService.delete(4L);  //delete
     }
 }

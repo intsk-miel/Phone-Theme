@@ -16,6 +16,13 @@ public class Classes {
         this.time = time;
     }
 
+    public Classes(Long teacherId, Long schoolId, Long subjectId, double time) {
+        this.teacherId = teacherId;
+        this.schoolId = schoolId;
+        this.subjectId = subjectId;
+        this.time = time;
+    }
+
     public Long getId() {
         return id;
     }

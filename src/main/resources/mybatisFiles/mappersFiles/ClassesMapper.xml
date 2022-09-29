@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
+        'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
+
+<mapper namespace="databases.services.mybatis.mappers.IClassesMapper">
+
+    <select id="getById" parameterType="Long" resultMap="ClassesResult">
+        SELECT * FROM classes WHERE id =#{id}
+    </select>
+
+    <resultMap id="ClassesResult" type="Classes">
+        <id property="id" column="id"/>
+        <result property="teacherId" column="Teacher_Id"/>
+        <result property="schoolId" column="School_Id"/>
+        <result property="subjectId" column="Subject_Id"/>
+        <result property="time" column="Time"/>
+    </resultMap>
+
+    <select id="getAllClasses" resultMap="ClassesResult">
+        SELECT * FROM Classes
+    </select>
+
+    <insert id="insert" parameterType="Classes" useGeneratedKeys="true"
+            keyProperty="id" >
+        INSERT INTO Classes(Teacher_Id,School_Id,Subject_Id,Time)
+        VALUES (#{teacherId},#{schoolId},#{subjectId},#{time})
+    </insert>
+
+    <update id="update" parameterType="Classes">
+        UPDATE Classes
+        SET
+        Teacher_Id = #{teacherId},
+        School_Id = #{schoolId},
+        Subject_Id = #{subjectId},
+        Time = #{time}
+        WHERE id = #{id}
+    </update>
+
+    <delete id="delete" parameterType="Long">
+        DELETE FROM Classes WHERE id= #{id}
+    </delete>
+
+</mapper>

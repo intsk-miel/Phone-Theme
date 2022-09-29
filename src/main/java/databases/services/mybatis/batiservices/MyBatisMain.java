@@ -5,7 +5,6 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import java.io.IOException;
 import java.io.Reader;
 
@@ -18,7 +17,7 @@ public class MyBatisMain {
     {
         Reader reader = null;
         try {
-            reader = Resources.getResourceAsReader("mybatis files/mybatis-config.xml");
+            reader = Resources.getResourceAsReader("mybatisFiles/mybatis-config.xml");
         }catch (IOException e){
             LOGGER.error(e);
         }
