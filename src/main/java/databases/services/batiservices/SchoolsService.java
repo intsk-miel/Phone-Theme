@@ -1,7 +1,7 @@
 package databases.services.batiservices;
 
 import databases.models.Schools;
-import databases.services.mappers.ISchoolsMapper;
+import databases.services.batiservices.mappers.ISchoolsMapper;
 import databases.services.batiservices.interfaceservicebatis.ISchoolsService;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.logging.log4j.LogManager;

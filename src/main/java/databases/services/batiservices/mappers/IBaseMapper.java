@@ -1,4 +1,4 @@
-package databases.services.mappers;
+package databases.services.batiservices.mappers;
 
 public interface IBaseMapper <M>{
     M getById(Long id);

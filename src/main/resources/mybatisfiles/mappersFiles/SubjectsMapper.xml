@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
         'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
 
-<mapper namespace="databases.services.mappers.ISubjectsMapper">
+<mapper namespace="databases.services.batiservices.mappers.ISubjectsMapper">
 
     <select id="getById" parameterType="Long" resultMap="SubjectsResult">
         SELECT * FROM Subjects WHERE id =#{id}
