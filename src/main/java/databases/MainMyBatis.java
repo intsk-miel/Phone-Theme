@@ -1,9 +1,9 @@
 package databases;
 
+import databases.services.batiservices.ClassesService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import databases.models.*;
-import databases.services.mybatis.batiservices.*;
 
 public class MainMyBatis {
     private static final Logger LOGGER = LogManager.getLogger(MainMyBatis.class);
