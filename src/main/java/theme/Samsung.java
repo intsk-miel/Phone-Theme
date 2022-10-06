@@ -1,7 +1,7 @@
 package theme;
 
-import interfaces.IDisplay;
-import interfaces.IVoice;
+import json.interfaces.IDisplay;
+import json.interfaces.IVoice;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

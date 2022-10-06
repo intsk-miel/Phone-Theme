@@ -1,9 +1,8 @@
 package theme;
 
-import interfaces.IDisplay;
-import interfaces.ICallType;
-import interfaces.ICamera;
-import interfaces.IVoice;
+import json.interfaces.ICallType;
+import json.interfaces.ICamera;
+import json.interfaces.IVoice;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import java.util.Objects;

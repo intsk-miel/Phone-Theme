@@ -1,7 +1,7 @@
 package theme;
 
-import interfaces.ICamera;
-import interfaces.IFingerPrint;
+import json.interfaces.ICamera;
+import json.interfaces.IFingerPrint;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

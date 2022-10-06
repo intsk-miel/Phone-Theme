@@ -10,7 +10,7 @@ import java.util.HashMap;
 
 public class ReadFile {
     public static void main(String[] args) throws IOException {
-        File file = new File("Sherlock.txt");
+        File file = new File("sherlock.txt");
         String readFromFile = FileUtils.readFileToString(file, "UTF-8");
 
         String[] words = readFromFile.split(" ");
@@ -21,6 +21,6 @@ public class ReadFile {
                 map.put(word, count + 1);
             } else map.put(word, 1);
         }
-        FileUtils.writeLines(new File("NumberOfUniqueWords.txt"), StandardCharsets.UTF_8.name(), Collections.singleton(map));
+        FileUtils.writeLines(new File("numberOfUniqueWords.txt"), StandardCharsets.UTF_8.name(), Collections.singleton(map));
     }
 }
